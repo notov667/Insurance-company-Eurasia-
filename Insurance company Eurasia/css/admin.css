@@ -1,0 +1,135 @@
+body {
+    background-color: #fff;
+}
+
+.admin_wrapper {
+    padding: 100px 0;
+    width: 100%;
+}
+.admin_content {
+    margin: 50px 0;
+    width: 100%;
+
+}
+.admin_content ._shown {
+    display: block;
+}
+.admin_nav {
+    position: relative;
+    margin: 30px 0;
+    width: 40%;
+    display: flex;
+    justify-content: space-between;
+
+}
+.admin_nav a {
+    position: relative;
+
+    cursor: pointer;
+}
+.admin_nav a._active {
+
+    font-weight: 500;    
+}
+.prem_users::after, .all_users::after {
+    position: absolute;
+    content: '';
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: transparent;
+    
+    bottom: -10px;
+}
+.prem_users:hover::after, .all_users:hover::after{
+    background-color: var(--accent);
+}
+.admin_nav a._active::after {
+    background-color: var(--accent);
+}
+
+.prem_users_table, .all_users_table {
+    display: none;
+}
+
+.admin_content table {
+    font-size: 16px;
+    border-collapse: collapse;
+    text-align: left;
+}
+.admin_content th, .admin_content td {
+    background: transparent;
+    padding: 10px 20px;
+    border-style: solid;
+    border-width: 0 1px 1px 0;
+    border-color: var(--accent);
+}
+.admin_content tr:last-child td {
+    border-bottom: none;
+}
+.admin_content td:last-child, .admin_content th:last-child {
+    border-right: none;
+}
+
+
+
+.delete_form {
+    margin: 30px 0 0;
+    display: flex;
+    width: 30%;
+    flex-direction: column;
+
+}
+.delete_form a {
+    margin: 10px 0 0;
+}
+.delete_input {
+    position: relative;
+    width: 100%;
+    margin: 35px 0 0;
+}
+.delete_input label {
+    position: absolute;
+    top: -10px;
+    left: 20px;
+    font-weight: 400;
+    font-size: 16px;
+    text-transform: uppercase;
+    background-color: #fff;
+    padding: 0 5px;
+}
+.delete_input select {
+    width: 100%;
+    height: 55px;
+    background-color: transparent;
+    padding: 0 20px;
+    font-size: 16px;
+
+    border-radius: 15px;
+    border: solid 2px var(--bg);
+    outline: 0;
+}
+.delete_input input {
+    width: 100%;
+    height: 55px;
+    background-color: transparent;
+    padding: 0 20px;
+    font-size: 16px;
+
+    border-radius: 15px;
+    border: solid 2px var(--bg);
+    outline: 0;
+}
+.delete_btn {
+    margin: 35px 0 0;
+    width: 100%;
+    height: 50px;
+    background-color: var(--accent);
+    color: #fff;
+    font-weight: 500;
+    font-size: 16px;
+
+    border-radius: 15px;
+    border: none;
+    cursor: pointer;
+}

@@ -1,0 +1,25 @@
+body {
+    background-color: #fff;
+}
+.aboutus_banner {
+    padding: 200px 0 0;
+    background-image: url(/img/aboutus_img.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: repeat-y;
+}
+.aboutus_wrapper {
+    width: 100%;
+    margin: 50px 0 0;
+    color: var(--bg);
+}
+
+.aboutus_content {
+    width: 100%;
+}
+.aboutus_content h1 {
+    text-align: center;
+}
+.aboutus_content h2, p {
+    margin-top: 30px;
+}

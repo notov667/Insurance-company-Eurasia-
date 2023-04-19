@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="css/landing.css">
+        <link rel="stylesheet" href="fonts/icon_style.css">
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">     
+        <title>Главная</title>
+    </head>
+    <body id="body">
+        <div class="nav">
+            <div class="container">
+                <div class="nav_panel">
+                    <a href="#main-anchor" class="logo"><img src="img/nav_logo.png" alt="Euro"></a>
+                    <div class="nav_links">
+                        <a href="package.html">Виды пакетов</a>
+                        <a href="aboutus.html">О нас</a>
+                    </div>
+                    <div class="nav_btn"><span class="icon-login"></span>Личный кабинет</div>
+                </div>
+            </div>
+        </div>
+        <div class="auth_wrapper" id="popUp">
+            <div class="container">
+                <div class="auth_content">
+                    <div class="auth_info">
+                        <div class="auth_logo"><img src="img/auth_logo.png" alt="Euro"></div>
+                        <p>Первая в Казахстане страховая компания</p>
+                    </div>
+                    <div class="auth_panel" id="login">
+                        <h2>Войти</h2>
+                        <form action="php/auth.php" class="auth_form" id="login_form" method="post"> 
+                            <div class="auth_input">
+                                <label for="login_tel">НОМЕР ТЕЛЕФОНА</label>
+                                <input id="login_tel" class="_tel _req" type="text" name="tel" autocomplete="off">
+                                <small>Номер телефона введен не коректно</small>
+                            </div>
+                            <div class="auth_input">
+                                <label for="password">ПАРОЛЬ</label>
+                                <input id="password" class="_pass _req" type="password" name="pass" autocomplete="off">
+                                <small>Пароль должен содержать буквы, спец. символы и цифры не менее 8 символов</small>
+                            </div>
+                            <a href="php/logout.php">Забыли пароль?</a>
+                            <button class="auth_btn" id="login_btn" type="submit" disabled>Войти</button>
+                        </form>
+                        <a id="no_account">У вас нет аккаунта?</a>
+                        <a onclick="ClosePopUp()"><span class="icon-left_arrow"></span>Назад</a>
+                    </div>
+                    <div class="auth_panel" id="reg">
+                        <h2>Регистрация</h2>
+                        <form action="php/reg.php" class="auth_form" id="reg_form" method="post">
+                            <div class="auth_input">
+                                <label for="iin_num">ИИН</label>
+                                <input id="iin_num" class="_iin _req" type="text" name="iin" autocomplete="off">
+                                <small>ИИН введен не коректно</small>
+                            </div>
+                            <div class="auth_input">
+                                <label for="reg_tel">НОМЕР ТЕЛЕФОНА</label>
+                                <input id="reg_tel" class="_tel _req" type="text" name="tel" autocomplete="off">
+                                <small>Номер телефона введен не коректно</small>
+                            </div>
+                            <div class="auth_input">
+                                <label for="reg_email">Email</label>
+                                <input id="reg_email" class="_email _req" type="email" name="email" autocomplete="off">
+                                <small>email введен не коректно</small>
+                            </div>
+                            <div class="auth_input">
+                                <label for="reg_pass">ПАРОЛЬ</label>
+                                <input id="reg_pass" class="_pass _req" type="password" name="pass">
+                                <small>Пароль должен содержать буквы, спец. символы и цифры не менее 8 символов</small>
+                            </div>
+                            <button class="auth_btn" id="reg_btn" type="submit" disabled>Зарегистрироваться</button>
+                        </form>
+                        <a id="have_account">У вас уже есть аккаунт?</a>
+                        <a onclick="ClosePopUp()"><span class="icon-left_arrow"></span>Назад</a>
+                    </div>
+                </div>
+            </div>
+            <div class="auth_wrapper_bg" onclick="ClosePopUp()"></div>
+        </div>
+        <div class="main_wrapper" id="main-anchor">
+            <div class="container">
+                <div class="main_content">
+                    <a>Страховка</a>
+                    <a>Без осмотра</a>
+                    <h1>ЗАЩИТИТЕ СВОЁ АВТО</h1>
+                    <p>Добровольное страхование Каско защищает Ваше авто и действует вне зависимости от Вашей вины.</p>
+                    <p>Выберите подходящий тариф, привяжите банковскую карту и оформите подписку на страхование КАСКО. Можно не платить всю сумму сразу, оплачивайте раз в месяц по подписке или как обычно, раз в год.</p>
+                    <div class="package">
+                        <div class="package-row">
+                            <div class="package-cell"><span class="icon-package"></span></div>
+                            <div class="package-cell"><h3>БЫСТРОЕ ОФОРМЛЕНИЕ</h3><p>онлайн-оформление</p></div>
+                        </div>
+                        <div class="package-row">
+                            <div class="package-cell"><span class="icon-package"></span></div>
+                            <div class="package-cell"><h3>ГИБКИЕ ТАРИФЫ</h3><p>страховая защита на всё</p></div>
+                        </div>
+                    </div>
+                    <div class="calculator">
+                        <h2>Расчет cтоимости страховки</h2>
+                        <form action="" class="calculator_form">
+                            <div class="calculator_input">
+                                <label for="tel">НОМЕР ТЕЛЕФОНА</label>
+                                <input id="tel" type="text">
+                            </div>
+                            <div class="calculator_input">
+                                <label for="iin">ИИН</label>
+                                <input id="iin" type="text">
+                            </div>
+                            <div class="calculator_input">
+                                <label for="licenseplates">НОМЕР АВТО</label>
+                                <input id="licenseplates" type="text">
+                            </div>
+                            <div class="calculator_checkbox">
+                                <input type="checkbox" id="checkbox">
+                                <label for="checkbox">Я соглашаюсь на сбор и обработку моих персональных данных</label>
+                            </div>
+                            <a href="lk.php" class="calculator_btn">РАССЧИТАТЬ СТОИМОСТЬ</a>
+                        </form>
+                        <div class="calculator_logo"><img src="img/main_logo.png" alt="Euro"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="insurance_wrapper">
+            <div class="container">
+                <div class="insurance_content">
+                    <h2>СТРАХОВАНИЕ</h2>
+                    <p>Автострахование компенсирует ущерб, нанесенный вашему авто. Вне зависимости от наличия или отсутствия вашей вины.<br>Полис покрывает следующие риски:</p>
+                    <div class="insurance_cards">
+                        <div class="insuranse_cards_column">
+                            <div class="content_card _card1">
+                                <h3>УГОН</h3>
+                                <p>Выплатиим стоимость угнанного авто, чтобы вы смогли купить новое</p>
+                            </div>
+                            <div class="content_card _card3">
+                                <h3>КРАЖА СЪЕМНЫХ ДЕТАЛЕЙ</h3>
+                                <p>Если украдут зеркала, дворники или колеса, мы выплатим стоимость</p>
+                            </div>
+                        </div>
+                        <div class="insuranse_cards_column _second">
+                            <div class="content_card _card2">
+                                <h3>УЩЕРБ</h3>
+                                <p>Покроем ущерб при ДТП, стихийных бедствиях, разбитых стеклах, вмятинах и так далее</p>
+                            </div>
+                            <div class="content_card _card4">
+                                <h3>ПОЛНАЯ ГИБЕЛЬ АВТО</h3>
+                                <p>Если автомобиль нельзя восстановить, выплатим его стоимость</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="banner">
+            <div class="container">
+                <div class="banner_content">
+                    <div class="banner_text">
+                        <h2>ОФОРМИТЕ СТРАХОВАНИЕ</h2>
+                        <p>и перестаньте волноваться по любому поводу</p>
+                        <a href="#main-anchor"><button>РАССЧИТАТЬ</button></a>
+                    </div>
+                    <div class="banner_logo"><img src="img/main_logo.png" alt="Euro"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer">
+            <div class="footer_panel">
+                <div class="footer_info">
+                    <a href="#main-anchor"><div class="footer_logo"><img src="img/footer_logo.png" alt="Euro"></div></a>
+                    <p>Евразия страховая компания – первая в Казахстане страховая компания, которая работает для удобства автовладельцев. Именно для них мы запускаем полезные продукты и сервисы: простое оформление электронных полисов на сайте, Страховая подписка, цифровые выплаты и другие онлайн сервисы.</p>
+                </div>
+                <div class="footer_contacts">
+                    <a href="https://goo.gl/maps/4epZyDzT3oz5tiDP6"><span class="icon-address" style="font-size: 25px;"></span>Офис: улица, Манасова 31</a>
+                    <a href="https://web.whatsapp.com/send/?phone=77070223264"><span class="icon-whatsapp"></span>+7 (707) 022 3264<p>WhatsApp</p></a>
+                    <a href="tel:0001"><span class="icon-tel"></span>0001<p>Бесплатно с мобильного</p></a>
+                    <a href="mailto:info@mail.ru"><span class="icon-mail"></span>info@mail.ru</a>
+                </div>
+                <div class="footer_find">
+                    <div class="footer_map"><iframe width="100%" height="100%" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=en&amp;q=43.23512957999003,%2076.9096455246314+(IITU)&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"><a href="https://www.maps.ie/distance-area-calculator.html"></a></iframe></div>
+                        
+                    <div class="footer_links">
+                        <a href="https://www.instagram.com/e.notov/"><span class="icon-instagram"></span></a>
+                        <a href="https://t.me/ergalinotov"><span class="icon-telegram"></span></a>
+                        <a href="https://ru-ru.facebook.com"><span class="icon-facebook"></span></a>
+                        <a href="https://www.youtube.com/channel/UCy3wJQTHB41J9JnUCIBSMTg"><span class="icon-youtube"></span></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script src="js/script.js"></script>
+        <script src="js/validation.js"></script>
+    </body>
+</html>

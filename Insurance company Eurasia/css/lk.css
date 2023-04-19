@@ -1,0 +1,288 @@
+body {
+    background-color: #fff;
+}
+
+.lk_wrapper {
+    padding: 100px 0;
+    width: 100%;
+
+}
+.lk_panel {
+    margin: 100px 0;
+    display: flex;
+    width: 100%;
+
+    color: var(--bg);
+
+}
+
+/* Side navigation */
+.sidenav {
+    display: flex;
+    flex-direction: column;
+    width: 25%;
+}
+.sidenav h2 {
+    margin-bottom: 50px;
+}
+.sidenav a {
+    width: fit-content;
+    margin-bottom: 20px;
+    font-weight: 300;
+    font-size: 22px;
+    color: var(--bg);
+
+    text-decoration: underline 1px solid transparent;
+    cursor: pointer;
+}
+.sidenav a._chosen {
+    font-weight: 400;
+    text-decoration: underline 1px solid var(--bg);
+}
+.sidenav a:hover {
+
+    text-decoration: underline 1px solid var(--bg);
+}
+.lk_content {
+    margin-left: 10%;
+    width: 65%;
+}
+.lk_content ._active {
+    display: block;
+}
+
+/* My subs table */
+.mysubs {
+    display: none;
+    color: var(--bg);
+}
+.mysubs_nav {
+    position: relative;
+    margin: 50px 0 40px;
+    width: 70%;
+    display: flex;
+    justify-content: space-between;
+
+}
+.mysubs_nav a {
+    position: relative;
+
+    cursor: pointer;
+}
+.mysubs_nav a.mysubs_nav_active {
+
+    font-weight: 500;    
+}
+.active_btn::after, .inactive_btn::after {
+    position: absolute;
+    content: '';
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: transparent;
+    
+    bottom: -10px;
+}
+.active_btn:hover::after, .inactive_btn:hover::after{
+    background-color: var(--accent);
+}
+.mysubs_nav a.mysubs_nav_active::after {
+    background-color: var(--accent);
+}
+.active_subs, .inactive_subs {
+    display: none;
+}
+.mysubs ._show_p {
+    display: block;
+}
+.mysubs table {
+    font-size: 16px;
+    border-collapse: collapse;
+    text-align: left;
+}
+.mysubs th, .mysubs td {
+    background: transparent;
+    padding: 10px 20px;
+    border-style: solid;
+    border-width: 0 1px 1px 0;
+    border-color: var(--accent);
+}
+.mysubs tr:last-child td {
+    border-bottom: none;
+}
+.mysubs td:last-child, .mysubs th:last-child {
+    border-right: none;
+}
+
+/* Add subs */
+.addsubs {
+    display: none;
+}
+.addsubs form {
+    display: flex;
+    width: 60%;
+    flex-direction: column;
+    align-items: end;
+
+}
+.addsubs form a {
+    margin: 10px 0 0;
+}
+.addsubs_radio {
+    margin: 35px 0 0;
+    width: 100%;
+    min-height: 55px;
+    background-color: transparent;
+    font-size: 16px;
+
+    border-radius: 15px;
+    border: solid 2px var(--bg);
+    outline: 0;
+}
+.addsubs_radio_input {
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.addsubs_radio_input input {
+    width: 16px;
+    height: 16px;
+}
+.addsubs_input {
+    position: relative;
+    width: 100%;
+    margin: 35px 0 0;
+}
+.addsubs_input small {
+    display: none;
+    color: red;
+}
+.addsubs_input._error small {
+    display: block;
+}
+.addsubs_input label {
+    position: absolute;
+    top: -10px;
+    left: 20px;
+    font-weight: 400;
+    font-size: 16px;
+    text-transform: uppercase;
+    background-color: #fff;
+    padding: 0 5px;
+}
+.addsubs_input select {
+    width: 100%;
+    height: 55px;
+    background-color: transparent;
+    padding: 0 20px;
+    font-size: 16px;
+
+    border-radius: 15px;
+    border: solid 2px var(--bg);
+    outline: 0;
+}
+.addsubs_input input {
+    width: 100%;
+    height: 55px;
+    background-color: transparent;
+    padding: 0 20px;
+    font-size: 16px;
+
+    border-radius: 15px;
+    border: solid 2px var(--bg);
+    outline: 0;
+}
+.addsubs_input input._error {
+    color: red;
+}
+.addsubs_btn {
+    margin: 35px 0 0;
+    width: 100%;
+    height: 50px;
+    background-color: var(--accent);
+    color: #fff;
+    font-weight: 500;
+    font-size: 16px;
+
+    border-radius: 15px;
+    border: none;
+    cursor: pointer;
+}
+.addsubs_btn:disabled,
+.addsubs_btn[disabled] {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+
+/* Settings panel */
+.settings_panel {
+    display: none;
+}
+
+.change_form {
+    display: flex;
+    width: 50%;
+    flex-direction: column;
+}
+.change_form h3 {
+    margin: 30px 0 0;
+}
+.change_form a {
+    margin: 10px 0 0;
+}
+.change_input {
+    position: relative;
+    width: 100%;
+    margin: 35px 0 0;
+}
+.change_input small {
+    display: none;
+    color: red;
+}
+.change_input small._error, .change_input small.pass_error {
+    display: block;
+}
+.change_input label {
+    position: absolute;
+    top: -10px;
+    left: 20px;
+    font-weight: 400;
+    font-size: 16px;
+    text-transform: uppercase;
+    background-color: #fff;
+    padding: 0 5px;
+}
+.change_input input {
+    width: 100%;
+    height: 55px;
+    background-color: transparent;
+    padding: 0 20px;
+    font-size: 16px;
+
+    border-radius: 15px;
+    border: solid 2px var(--bg);
+    outline: 0;
+}
+.change_input input._error {
+    color: red;
+}
+.change_btn {
+    margin: 35px 0 0;
+    width: 100%;
+    height: 50px;
+    background-color: var(--accent);
+    color: #fff;
+    font-weight: 500;
+    font-size: 16px;
+
+    border-radius: 15px;
+    border: none;
+    cursor: pointer;
+}
+.change_btn:disabled,
+.change_btn[disabled] {
+    opacity: 0.5;
+    cursor: not-allowed;
+}

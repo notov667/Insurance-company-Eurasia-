@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="css/aboutus.css">
+        <link rel="stylesheet" href="fonts/icon_style.css">
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">     
+        <title>Главная</title>
+    </head>
+    <body id="body">
+        <div class="nav">
+            <div class="container">
+                <div class="nav_panel">
+                    <a href="index.html" class="logo"><img src="img/nav_logo.png" alt="Euro"></a>
+                    <div class="nav_links">
+                        <a href="package.html">Виды пакетов</a>
+                        <a href="aboutus.html" class="__active">О нас</a>
+                    </div>
+                    <div class="nav_btn"><span class="icon-login"></span>Личный кабинет</div>
+                </div>
+            </div>
+        </div>
+        <div class="auth_wrapper" id="popUp">
+            <div class="container">
+                <div class="auth_content">
+                    <div class="auth_info">
+                        <div class="auth_logo"><img src="img/auth_logo.png" alt="Euro"></div>
+                        <p>Первая в Казахстане страховая компания</p>
+                    </div>
+                    <div class="auth_panel" id="login">
+                        <h2>Войти</h2>
+                        <form action="php/auth.php" class="auth_form" id="login_form" method="post"> 
+                            <div class="auth_input">
+                                <label for="login_tel">НОМЕР ТЕЛЕФОНА</label>
+                                <input id="login_tel" class="_tel _req" type="text" name="tel" autocomplete="off">
+                                <small>Номер телефона введен не коректно</small>
+                            </div>
+                            <div class="auth_input">
+                                <label for="password">ПАРОЛЬ</label>
+                                <input id="password" class="_pass _req" type="password" name="pass" autocomplete="off">
+                                <small>Пароль должен содержать буквы, цпец. символы и цифры не менее 8 символов</small>
+                            </div>
+                            <a href="php/logout.php">Забыли пароль?</a>
+                            <button class="auth_btn" id="login_btn" type="submit" disabled>Войти</button>
+                        </form>
+                        <a id="no_account">У вас нет аккаунта?</a>
+                        <a onclick="ClosePopUp()"><span class="icon-left_arrow"></span>Назад</a>
+                    </div>
+                    <div class="auth_panel" id="reg">
+                        <h2>Регистрация</h2>
+                        <form action="php/reg.php" class="auth_form" id="reg_form" method="post">
+                            <div class="auth_input">
+                                <label for="iin_num">ИИН</label>
+                                <input id="iin_num" class="_iin _req" type="text" name="iin" autocomplete="off">
+                                <small>ИИН введен не коректно</small>
+                            </div>
+                            <div class="auth_input">
+                                <label for="reg_tel">НОМЕР ТЕЛЕФОНА</label>
+                                <input id="reg_tel" class="_tel _req" type="text" name="tel" autocomplete="off">
+                                <small>Номер телефона введен не коректно</small>
+                            </div>
+                            <div class="auth_input">
+                                <label for="reg_email">Email</label>
+                                <input id="reg_email" class="_email _req" type="email" name="email" autocomplete="off">
+                                <small>email введен не коректно</small>
+                            </div>
+                            <div class="auth_input">
+                                <label for="reg_pass">ПАРОЛЬ</label>
+                                <input id="reg_pass" class="_pass _req" type="password" name="pass">
+                                <small>Пароль должен содержать буквы, цпец. символы и цифры не менее 8 символов</small>
+                            </div>
+                            <button class="auth_btn" id="reg_btn" type="submit" disabled>Зарегистрироваться</button>
+                        </form>
+                        <a id="have_account">У вас уже есть аккаунт?</a>
+                        <a onclick="ClosePopUp()"><span class="icon-left_arrow"></span>Назад</a>
+                    </div>
+                </div>
+            </div>
+            <div class="auth_wrapper_bg" onclick="ClosePopUp()"></div>
+        </div>
+
+        <div class="aboutus_banner"></div>
+        <div class="aboutus_wrapper">
+            <div class="container">
+                <div class="aboutus_content">
+                    <h1>О НАС</h1>
+                    <h2>Страховая компания Евразия</h2>
+                    <p>АО «Страховая компания «Евразия» работает с 1995 года и является лидером рынка страхования по объему страховых выплат и премий в Республике Казахстан. Уже более 20 лет мы работаем для того, чтобы Вы почувствовали себя уверенно и спокойно, находясь под нашей надежной защитой.</p>
+                    <p>СК «Евразия» предлагает все виды обязательного и добровольного страхования для корпоративных клиентов и частных лиц. За все это время мы не только усовершенствовали традиционные программы страхования, но и разработали новые программы, предусматривающие большее количество случайностей и нюансов.</p>
+                    <p>Компании Казахстана страхуют у нас сотрудников, транспорт, имущество, гражданско-правовую ответственность. Владельцы предприятий, застрахованных в СК «Евразия», могут спокойно заниматься развитием своего бизнеса, не беспокоясь о форс-мажорных ситуациях, ведь мы стабильно и надежно производим выплаты по страховым случаям. Для частных лиц доступны страхование автомобиля (АвтоКаско), обязательное страхование гражданско-правовой ответственности владельцев транспортных средств (ОГПО ВТС), страхование имущества, страхование по выезжающим за рубеж. Со страховым полисом СК «Евразия» каждый может чувствовать себя полностью защищенным от непредвиденных финансовых трат в случае форс-мажорных ситуаций. В стремлении к постоянному совершенствованию и качественному развитию мы нацелены, прежде всего, на служение интересам Общества и на личный успех наших клиентов, партнеров и сотрудников. При осуществлении своей деятельности мы придерживаемся принципов сотрудничества, доверия и поддержки.</p>
+                    <p>Офисы представительств компании работают в Алматы, Астане, Караганде и других крупных городах Казахстана. Будем рады видеть Вас в числе наших клиентов!
+                        Мы готовы организовать встречу в любое удобное для Вас время, с целью конкретного обсуждения всех интересующих Вас вопросов и определения приоритетных направлений сотрудничества. Мы готовы учесть все Ваши пожелания и предоставить услуги опытных специалистов.</p>
+                </div>
+            </div>
+        </div>
+        <div class="footer">
+            <div class="footer_panel">
+                <div class="footer_info">
+                    <a href="#main-anchor"><div class="footer_logo"><img src="img/footer_logo.png" alt="Euro"></div></a>
+                    <p>Евразия страховая компания – первая в Казахстане страховая компания, которая работает для удобства автовладельцев. Именно для них мы запускаем полезные продукты и сервисы: простое оформление электронных полисов на сайте, Страховая подписка, цифровые выплаты и другие онлайн сервисы.</p>
+                </div>
+                <div class="footer_contacts">
+                    <a href="https://goo.gl/maps/4epZyDzT3oz5tiDP6"><span class="icon-address" style="font-size: 25px;"></span>Офис: улица, Манасова 31</a>
+                    <a href="https://web.whatsapp.com/send/?phone=77070223264"><span class="icon-whatsapp"></span>+7 (707) 022 3264<p>WhatsApp</p></a>
+                    <a href="tel:0001"><span class="icon-tel"></span>0001<p>Бесплатно с мобильного</p></a>
+                    <a href="mailto:info@mail.ru"><span class="icon-mail"></span>info@mail.ru</a>
+                </div>
+                <div class="footer_find">
+                    <div class="footer_map"><iframe width="100%" height="100%" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=en&amp;q=43.23512957999003,%2076.9096455246314+(IITU)&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"><a href="https://www.maps.ie/distance-area-calculator.html"></a></iframe></div>
+                        
+                    <div class="footer_links">
+                        <a href="https://www.instagram.com/e.notov/"><span class="icon-instagram"></span></a>
+                        <a href="https://t.me/ergalinotov"><span class="icon-telegram"></span></a>
+                        <a href="https://ru-ru.facebook.com"><span class="icon-facebook"></span></a>
+                        <a href="https://www.youtube.com/channel/UCy3wJQTHB41J9JnUCIBSMTg"><span class="icon-youtube"></span></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script src="js/script.js"></script>
+        <script src="js/validation.js"></script>
+    </body>
+</html>

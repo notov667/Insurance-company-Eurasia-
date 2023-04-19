@@ -1,0 +1,259 @@
+/* main part */
+.main_wrapper {
+    background-image: linear-gradient(rgba(80, 185, 215, 0.75) 0%, rgba(80, 185, 215, 0.75) 100%), url(../img/main_img.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+    padding: 300px 0 256px;
+
+    border-radius: 0px 0px 450px 0px;
+}
+.main_content {
+    position: relative;
+    padding: 32px;
+    background: rgba(18, 18, 18, 0.6);
+
+
+    border-radius: 30px;
+}
+.main_content a {
+    margin-right: 15px;
+    padding: 7px 15px;
+    background-color: var(--light);
+    color: var(--dark);
+    font-size: 16px;
+    
+    border-radius: 5px;
+}
+.main_content h1 {
+    margin: 20px 0 0;
+    color: var(--light);
+    
+    max-width: 520px;
+}
+.main_content p {
+    margin: 15px 0 0;
+    color: var(--light);
+    max-width: 520px;
+}
+.package {
+    display: table;
+    margin: 20px 0 0;
+}
+.package-row {
+    display: table-row;
+    max-width: 520px;
+}
+.package-cell {
+    display: table-cell;
+    padding: 0 15px 15px 0;
+    vertical-align: middle;
+}
+.package-cell span {
+    color: var(--accent);
+    font-size: 40px;
+}
+.package-cell h3 {
+    color: var(--light);
+}
+.package-cell p {
+    margin: 0;
+    color: var(--light);
+    opacity: 0.75;
+}
+/* calculator */
+.calculator {
+    position: absolute;
+    top: -100px;
+    right: 40px;
+    max-width: 500px;
+    padding: 50px;
+
+
+
+    background-color: var(--dark);
+    border: 5px solid var(--light);
+    border-radius: 30px;
+}
+.calculator h2 {
+    text-align: center;
+    color: var(--light);
+}
+.calculator_form {
+    display: flex;
+    margin: 0 auto 30px;
+    flex-direction: column;
+}
+.calculator_input {
+    position: relative;
+    width: 100%;
+    margin: 35px 0 0;
+}
+.calculator_input label {
+    position: absolute;
+    top: -10px;
+    left: 20px;
+    font-weight: 400;
+    font-size: 16px;
+    color: var(--light);
+    background-color: var(--dark);
+    padding: 0 5px;
+}
+.calculator_input input { 
+    width: 100%;
+    height: 55px;
+    background-color: transparent;
+    padding: 0 20px;
+    color: var(--light);
+    font-size: 16px;
+
+    border-radius: 15px;
+    border: solid 2px var(--light);
+    outline: 0;
+}
+.calculator_checkbox {
+    display: flex;
+    width: 100%;
+    margin: 15px 0;
+}
+.calculator_checkbox input {
+    margin-right: 10px;
+    width: 22px;
+    height: 22px;
+    background-color: var(--light);
+    outline: 0;
+    cursor: pointer;
+
+}
+.calculator_checkbox label {
+    color: var(--light);
+    cursor: pointer;
+}
+a.calculator_btn {
+    text-align: center;
+    background-color: var(--light);
+    color: var(--dark);
+    font-weight: 500;
+    font-size: 16px;
+
+    border-radius: 15px;
+    cursor: pointer;
+}
+.calculator_logo {
+    margin: 0 auto;
+    width: 170px;
+}
+.calculator_logo img {
+    width: 100%;
+    object-fit: cover;
+}
+
+/* insurance part */
+.insurance_wrapper {
+    margin: 70px 0 100px;
+}
+.insurance_content {
+    color: var(--light);
+    text-align: center;
+}
+.insurance_cards {
+    display: flex;
+    justify-content: center;
+    margin: 70px auto;
+    width: 60%;
+    min-height: 700px;
+}
+.insuranse_cards_column {
+    width: 45%;
+} 
+.insuranse_cards_column._second {
+    padding-top: 100px;
+    margin-left: 5%;
+} 
+.content_card {
+    margin-bottom: 30px;
+    padding: 30px;
+    width: 100%;
+    min-height: 350px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    background-image: linear-gradient(rgba(80, 185, 215, 0.75) 0%, rgba(80, 185, 215, 0.75) 100%), var(--bg_image);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    cursor: pointer;
+    border-radius: 0px 75px 15px;
+    transition: all 0.2s ease 0.2s;
+}
+.content_card:hover {
+    background-image: linear-gradient(rgba(80, 185, 215, 0.25) 0%, rgba(80, 185, 215, 0.25) 100%), var(--bg_image);
+    padding: 35px;
+    transition: all 0.2s ease 0.2s;
+}
+.content_card._card1 {
+    --bg_image: url(../img/1card.png);
+    top: 0;
+    left: 0;
+}
+.content_card._card2 {
+    --bg_image: url(../img/2card.png);
+    right: 0;
+    bottom: 445px;
+}
+.content_card._card3 {
+    --bg_image: url(../img/3card.png);
+    top: 445px;
+    left: 0;
+}
+.content_card._card4 {
+    --bg_image: url(../img/4card.png);
+    right: 0;
+    bottom: 0;
+}
+
+/* banner */
+.banner {
+    width: 100%;
+    min-height: 400px;
+    padding: 100px 0;
+    background-image: linear-gradient(rgba(80, 185, 215, 0.75) 0%, rgba(80, 185, 215, 0.75) 100%), url(../img/banner.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.banner_content {
+    display: flex;
+    justify-content: space-between;
+}
+.banner_text {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    color: var(--light);
+}
+.banner_text button {
+    margin: 100px 0 0;
+    width: 50%;
+    min-height: 50px;
+    background-color: var(--light);
+    text-transform: uppercase;
+    font-size: 16px;
+    font-weight: 500;
+    color: var(--dark);
+
+    cursor: pointer;
+    border: none;
+    border-radius: 15px;
+}
+.banner_logo {
+    margin: auto 0;
+    width: 25%;
+}
+.banner_logo img {
+    width: 100%;
+    object-fit: cover;
+}
